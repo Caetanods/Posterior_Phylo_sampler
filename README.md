@@ -2,6 +2,8 @@
 
 Script to sample random trees from large nexus files with posterior distribution of trees.
 
+The script runs in Linux and Mac. It depends on python.
+
 The arguments of the program are:
 
 First argument is the burnin percentage [a value between 0.0 and 1.0]
