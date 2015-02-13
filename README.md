@@ -12,4 +12,4 @@ Third argument is the file_name of the *.trees output
 
 Usage example:
 
-'./post_phylo_sampler 0.5 10 yourfile.trees'
+'./post_phylo_sampler.sh 0.5 10 yourfile.trees'
