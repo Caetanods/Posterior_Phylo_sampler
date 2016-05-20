@@ -13,22 +13,39 @@ echo ""
 echo "	Author: Daniel S. Caetano -- caetanods1@gmail.com"
 
 if [[ -z $1 ]]; then
-    echo 'Please provide the burnin percentage [0 to 1 value] as $1.'
+    echo ""
+    echo "ERROR"
+    echo ""
+    echo 'Please provide the burnin percentage [0 to 1 value] as $1 (first argument).'
     exit
 fi
 
 if [[ -z $2 ]]; then
-    echo 'Please provide the number of trees to be sampled as $2.'
+    echo ""
+    echo "ERROR"
+    echo ""
+    echo 'Please provide the number of trees to be sampled as $2 (second argument).'
     exit
 fi
 
 if [[ -z $3 ]]; then
-    echo 'Please provide the *.trees file as $3.'
+    echo ""
+    echo "ERROR"
+    echo ""
+    echo 'Please provide the *.trees file as $3 (third argument).'
     exit
 fi
 
-echo ""
-echo "	Reading file..."
+if [[ -f $3 ]]; then
+    echo ""
+    echo '	Reading file '$3'...'
+else
+    echo ""
+    echo "ERROR"
+    echo ""
+    echo 'File '$3' not found. Please set $3 (third argument) as the *.trees file with the MCMC chain. The output from the BEAST or Mr. Bayes run.'
+    exit
+fi
 
 # Only the lines NOT starting with "tree"
 HEADER=`cat $3 | sed -n '/^tree/!p'`
