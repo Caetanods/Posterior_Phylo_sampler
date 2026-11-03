@@ -97,7 +97,7 @@ echo ""
 echo "	Sampling trees..."
 
 while [[ "$COUNT" -lt "$2" ]]; do
-  RANDO=$(python -c "import random; var1=random.randint(${BASE},${TLINES}); print var1")
+  RANDO=$(python3 -c "import random; var1=random.randint(${BASE},${TLINES}); print(var1)")
   if array_contains RES $RANDO; then
     RES[COUNT]=$RANDO
     TAIL=`echo "$TLINES-$RANDO" | bc`
