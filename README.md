@@ -2,7 +2,7 @@
 
 Script to sample random trees from large nexus files with posterior distribution of trees.
 
-The script runs in Linux and Mac. It depends on python.
+The script runs in Linux and Mac. It depends on python3.
 
 The arguments of the program are:
 
